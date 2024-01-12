@@ -62,7 +62,8 @@ const Product = ({ product, isPurchased }: ProductProps) => {
     if (!user) {
       setShowModal(false);
       //ログインページへ移動
-      router.push("/login");
+      router.push("/api/auth/signin"); //Nextjsの機能を使う
+      // router.push("/login"); もしくはログインページに移動
     } else {
       //Stripeで決済する
       startCheckout();
