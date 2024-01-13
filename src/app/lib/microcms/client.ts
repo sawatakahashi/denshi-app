@@ -10,6 +10,9 @@ export const client = createClient({
 export const getALLProducts = async () => {
   const allProducts = await client.getList<ProductType>({
     endpoint: "denshiapp",
+    customRequestInit: {
+      cache: "no-store",
+    },
   });
 
   return allProducts;
@@ -19,6 +22,9 @@ export const getDetailProduct = async (contentId: string) => {
   const detailProduct = await client.getListDetail<ProductType>({
     endpoint: "denshiapp",
     contentId,
+    customRequestInit: {
+      cache: "no-store",
+    },
   });
 
   return detailProduct;
