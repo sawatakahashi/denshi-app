@@ -38,13 +38,25 @@ const Header = async () => {
             問い合わせ
           </Link>
           <Link
+            href={"/profile"}
+            className="text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
+            プロフィール
+          </Link>
+
+          {/* 
+          //ログイン機能はこちら
+
+
+          
+          <Link
             href={user ? "/profile" : "/api/auth/signin"}
             className="text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             {user ? "プロフィール" : "ログイン"}
-          </Link>
+          </Link> */}
           {/* ユーザーがログインしてたらログアウト、してなかったら何もなし */}
-          {user ? (
+          {/* {user ? (
             <Link
               href={"/api/auth/signout"}
               className="text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -53,8 +65,8 @@ const Header = async () => {
             </Link>
           ) : (
             ""
-          )}
-          <Link href={`/profile`}>
+          )} */}
+          <Link href={"/profile"}>
             <Image
             loading="eager"
               width={50}
