@@ -54,8 +54,9 @@ const Header = async () => {
           ) : (
             ""
           )}
-          <Link href={"/profile"}>
+          <Link href={`/profile`}>
             <Image
+            loading="eager"
               width={50}
               height={50}
               alt="profile_icon"
