@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ProductType } from "../types/types";
+
+
 type purchaseDetailProps = {
   purchaseDetailProduct: ProductType;
 };
