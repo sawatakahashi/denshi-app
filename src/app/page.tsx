@@ -1,6 +1,7 @@
 // "use client";
 
 import { getServerSession } from "next-auth";
+import Link from "next/link";
 import Product from "./components/Product";
 import { getALLProducts } from "./lib/microcms/client";
 import { nextAuthOptions } from "./lib/next-auth/options";
@@ -42,6 +43,8 @@ export default async function Home() {
           />
         ))}
       </main>
+      <Link href={"https://luckybeporamen.com/"} className="flex items-center m-6 text-center text-gray-300">Luck Bepo Ramen</Link>
+      
     </>
   );
 }
